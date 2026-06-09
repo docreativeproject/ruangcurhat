@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Curhat - Emotional Journaling & AI Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo-icon">✨</div>
+            <h1>Ruang Curhat</h1>
+            <p class="subtitle">Sampaikan bebanmu, temukan ketenangan di safe space ini.</p>
+        </header>
+
+        <section class="card journal-card">
+            <div class="card-body">
+                <div class="mood-section">
+                    <label class="section-label">Bagaimana perasaanmu saat ini?</label>
+                    <div class="mood-options">
+                        <label class="mood-item">
+                            <input type="radio" name="mood" value="sedih" checked>
+                            <span class="mood-emoji">😭</span>
+                            <span class="mood-name">sedih</span>
+                        </label>
+                        <label class="mood-item">
+                            <input type="radio" name="mood" value="senang">
+                            <span class="mood-emoji">🙂</span>
+                            <span class="mood-name">senang</span>
+                        </label>
+                        <label class="mood-item">
+                            <input type="radio" name="mood" value="marah">
+                            <span class="mood-emoji">😡</span>
+                            <span class="mood-name">marah</span>
+                        </label>
+                        <label class="mood-item">
+                            <input type="radio" name="mood" value="cemas">
+                            <span class="mood-emoji">😰</span>
+                            <span class="mood-name">cemas</span>
+                        </label>
+                        <label class="mood-item">
+                            <input type="radio" name="mood" value="lelah">
+                            <span class="mood-emoji">😴</span>
+                            <span class="mood-name">lelah</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label for="curhat-text" class="section-label">Tuliskan apa yang mengganjal di hatimu...</label>
+                    <textarea id="curhat-text" placeholder="Ceritakan semuanya di sini tanpa takut dihakimi..." rows="5" required></textarea>
+                </div>
+
+                <button type="button" id="btn-submit" class="btn-primary">
+                    <span>Kirim Curhat</span>
+                    <svg class="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section id="ai-response-card" class="card response-card hidden">
+            <div class="card-body">
+                <div class="response-header">
+                    <span class="ai-badge">AI Response</span>
+                    <span class="response-sparkle">✨</span>
+                </div>
+                <div id="ai-loading" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Mendengarkan ceritamu...</p>
+                </div>
+                <div id="ai-content" class="response-text">
+                    </div>
+            </div>
+        </section>
+
+        <section class="feed-section">
+            <div class="feed-header">
+                <h2>Public Anonymous Space</h2>
+                <p>Mendengar cerita anonim dari jiwa-jiwa yang saling menguatkan.</p>
+            </div>
+
+            <div class="feed-container">
+                <article class="feed-card">
+                    <div class="feed-meta">
+                        <span class="feed-mood">😭 sedih</span>
+                        <span class="feed-time">Baru saja</span>
+                    </div>
+                    <p class="feed-text">Hari ini rasanya berat banget, kerjaan numpuk dan ngerasa ga ada yang apresiasi usaha sendiri. Capek banget mental.</p>
+                </article>
+
+                <article class="feed-card">
+                    <div class="feed-meta">
+                        <span class="feed-mood">😰 cemas</span>
+                        <span class="feed-time">10 menit yang lalu</span>
+                    </div>
+                    <p class="feed-text">Besok ada interview kerja setelah 6 bulan nganggur. Deg-degan parah sampai ga bisa tidur, takut ngecewain ekspektasi orang tua.</p>
+                </article>
+
+                <article class="feed-card">
+                    <div class="feed-meta">
+                        <span class="feed-mood">😴 lelah</span>
+                        <span class="feed-time">1 jam yang lalu</span>
+                    </div>
+                    <p class="feed-text">Cuma pengen rebahan tanpa mikirin hari esok. Capek banget sama rutinitas kuliah dan tugas akhir yang ga beres-beres.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
