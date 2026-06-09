@@ -1,0 +1,2 @@
+# ruangcurhat
+Ruang untuk curhat
